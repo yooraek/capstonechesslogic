@@ -31,8 +31,10 @@ chesslogic_sample.setBoard(flipped_white_board)
 print(flipped_white_board[1][3])
 print(flipped_white_board[2][2])
 print(flipped_white_board[7][7])
+print(flipped_white_board[0][1])
 #y, x coord
 print(chesslogic_sample.validate((1, 3), (3, 3)))
+print(chesslogic_sample.validate((1, 3), (2, 3)))
 print(chesslogic_sample.validate((1, 3), (2, 3)))
 
 

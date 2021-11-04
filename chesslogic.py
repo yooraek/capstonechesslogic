@@ -202,6 +202,9 @@ class Chesslogic:
         if self.board[from_x][from_y][0] == 'E':
             print("case C")
             return False
+        if (to_x > 7 or to_x < 0 or to_y > 7 or to_y < 0):
+            print("out of range")
+            return False
         
         return True
     
@@ -215,6 +218,7 @@ class Chesslogic:
         print("curr cell: ", self.board[from_x][from_y])
         pieceName = self.board[from_x][from_y][1]
         pieceValid = False
+    
         print("Piece type: ", pieceName)
         print("fromPos", fromPos)
         if pieceName == 'Q':
@@ -244,3 +248,16 @@ class Chesslogic:
             for j in range (8):
                 print (self.board[i][j] + " ")
     
+    #function for testing purposes so i dont have to create list everytime
+    def updateBoardState(self, fromp, top):
+        from_x = fromp[1]
+        from_y = fromp[0]
+        to_x = top[1]
+        to_y = top[0]
+        if self.board[from_y][from_x] == 'EE':
+            print("error")
+        final_board = self.board.deepcopy()
+        final_board[from_y][from_x] = 'EE'
+        final_board[to_y][to_x] = self.board[from_y][from_x]
+        self.board = final_board
+
