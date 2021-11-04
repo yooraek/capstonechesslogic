@@ -261,3 +261,9 @@ class Chesslogic:
         final_board[to_y][to_x] = self.board[from_y][from_x]
         self.board = final_board
 
+    
+#initialize the past actions list after game is over
+    def resetPastList(self):
+        self.pastList = []
+
+
