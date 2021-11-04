@@ -37,10 +37,10 @@ class Chesslogic:
 
     
     def validKnightMove(self, fromPos, toPos):
-        from_x = fromPos[0]
-        from_y = fromPos[1]
-        to_x = toPos[0]
-        to_y = toPos[1]
+        from_x = fromPos[1]
+        from_y = fromPos[0]
+        to_x = toPos[1]
+        to_y = toPos[0]
         if abs(to_x - from_x) == 2 and abs(to_y - from_y) == 1:
             return True
         elif abs(to_x - from_x) == 1 and abs(to_y - from_y) == 2:
@@ -49,10 +49,10 @@ class Chesslogic:
             return False
     
     def validateRookMove(self, fromPos, toPos):
-        from_x = fromPos[0]
-        from_y = fromPos[1]
-        to_x = toPos[0]
-        to_y = toPos[1]
+        from_x = fromPos[1]
+        from_y = fromPos[0]
+        to_x = toPos[1]
+        to_y = toPos[0]
 
         if (from_x == to_x):
             if (to_y > from_y):
@@ -78,10 +78,10 @@ class Chesslogic:
             return False
 
     def validateQueenMove(self, fromPos, toPos):
-        from_x = fromPos[0]
-        from_y = fromPos[1]
-        to_x = toPos[0]
-        to_y = toPos[1]
+        from_x = fromPos[1]
+        from_y = fromPos[0]
+        to_x = toPos[1]
+        to_y = toPos[0]
         
         if (abs(to_x - from_x) == abs(to_y - from_y)):
             if (from_x > to_x) and (from_y > to_y):
@@ -174,10 +174,10 @@ class Chesslogic:
         return False
 
     def validKingMove(self, fromPos, toPos):
-        from_x = fromPos[0]
-        from_y = fromPos[1]
-        to_x = toPos[0]
-        to_y = toPos[1]
+        from_x = fromPos[1]
+        from_y = fromPos[0]
+        to_x = toPos[1]
+        to_y = toPos[0]
 
         if(abs(to_x - from_x)<= 1) and (abs(to_y - from_y) <= 1):
             return True
