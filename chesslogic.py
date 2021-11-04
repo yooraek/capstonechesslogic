@@ -11,6 +11,20 @@ board_starting_state = [['BR', 'BN', 'BB', 'BK', 'BQ', 'BB', 'BN', 'BR'],
     ['WP', 'WP', 'WP', 'WP', 'WP', 'WP', 'WP', 'WP'],
     ['WR1', 'WN', 'WB', 'WK', 'WQ', 'WB', 'WN', 'WR2']]
 
+
+flipped_white_board = [
+    ['WR1', 'WN', 'WB', 'WK', 'WQ', 'WB', 'WN', 'WR2'],
+    ['WP', 'WP', 'WP', 'WP', 'WP', 'WP', 'WP', 'WP'],
+    ['EE', 'EE', 'EE', 'EE', 'EE', 'EE', 'EE', 'EE'],
+    ['EE', 'EE', 'EE', 'EE', 'EE', 'EE', 'EE', 'EE'],
+    ['EE', 'EE', 'EE', 'EE', 'EE', 'EE', 'EE', 'EE'],
+    ['EE', 'EE', 'EE', 'EE', 'EE', 'EE', 'EE', 'EE'],
+    ['BP', 'BP', 'BP', 'BP', 'BP', 'BP', 'BP', 'BP'],
+    ['BR', 'BN', 'BB', 'BK', 'BQ', 'BB', 'BN', 'BR']
+
+]
+
+
 class Chesslogic:
     def __init__(self):
         self.pastList = []
@@ -267,3 +281,5 @@ class Chesslogic:
         self.pastList = []
 
 
+    def getPosPiece(self, pos):
+        return self.board[pos[0]][pos[1]]

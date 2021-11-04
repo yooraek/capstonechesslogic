@@ -21,9 +21,6 @@ flipped_white_board = [
     ['BP', 'BP', 'BP', 'BP', 'BP', 'BP', 'BP', 'BP'],
     ['BR', 'BN', 'BB', 'BK', 'BQ', 'BB', 'BN', 'BR']
 
-
-
-
 ]
 
 chesslogic_sample = chesslogic.Chesslogic()
@@ -36,6 +33,56 @@ print(flipped_white_board[0][1])
 print(chesslogic_sample.validate((1, 3), (3, 3)))
 print(chesslogic_sample.validate((1, 3), (2, 3)))
 print(chesslogic_sample.validate((1, 3), (2, 3)))
+print(chesslogic_sample.validate((1, 3), (4, 3)))
+
+print(chesslogic_sample.validate((0, 1), (2, 3)))
+print(chesslogic_sample.validate((0, 1), (4, 3)))
+print(chesslogic_sample.validate((0, 6), (2, 7)))
+print(chesslogic_sample.validate((0, 6), (2, 3)))
+
+
+flipped_white_board_1 = [
+    ['WR1', 'EE', 'WB', 'WK', 'WQ', 'WB', 'WN', 'WR2'],
+    ['WP', 'EE', 'WP', 'EE', 'EE', 'WP', 'WP', 'WP'],
+    ['EE', 'EE', 'EE', 'EE', 'EE', 'EE', 'EE', 'EE'],
+    ['EE', 'EE', 'EE', 'EE', 'EE', 'EE', 'EE', 'EE'],
+    ['EE', 'EE', 'EE', 'EE', 'EE', 'EE', 'EE', 'EE'],
+    ['EE', 'EE', 'EE', 'EE', 'EE', 'EE', 'EE', 'EE'],
+    ['BP', 'BP', 'BP', 'BP', 'BP', 'BP', 'BP', 'BP'],
+    ['BR', 'BN', 'BB', 'BK', 'BQ', 'BB', 'BN', 'BR']
+
+]
+
+flipped_white_board_2 = [
+    ['WR1', 'EE', 'WB', 'WK', 'WQ', 'EE', 'WN', 'WR2'],
+    ['WP', 'EE', 'WP', 'EE', 'EE', 'WP', 'WP', 'WP'],
+    ['EE', 'EE', 'EE', 'EE', 'EE', 'EE', 'EE', 'EE'],
+    ['EE', 'EE', 'EE', 'EE', 'EE', 'EE', 'EE', 'EE'],
+    ['EE', 'EE', 'EE', 'EE', 'EE', 'EE', 'EE', 'EE'],
+    ['EE', 'EE', 'EE', 'EE', 'EE', 'EE', 'EE', 'EE'],
+    ['BP', 'BP', 'BP', 'BP', 'BP', 'BP', 'BP', 'BP'],
+    ['BR', 'BN', 'BB', 'BK', 'BQ', 'BB', 'BN', 'BR']
+
+]
+
+chesslogic_sample1 = chesslogic.Chesslogic()
+chesslogic_sample1.setBoard(flipped_white_board_1)
+print(chesslogic_sample.validate((1, 3), (3, 3)))
+print(chesslogic_sample.validate((1, 3), (2, 3)))
+print(chesslogic_sample.validate((1, 3), (2, 3)))
+print(chesslogic_sample.validate((1, 3), (4, 3)))
+
+
+print(chesslogic_sample.validate((1, 3), (3, 3)))
+print(chesslogic_sample.validate((1, 3), (2, 3)))
+print(chesslogic_sample.validate((1, 3), (2, 3)))
+print(chesslogic_sample.validate((1, 3), (4, 3)))
+
+
+print(chesslogic_sample.validate((1, 3), (3, 3)))
+print(chesslogic_sample.validate((1, 3), (2, 3)))
+print(chesslogic_sample.validate((1, 3), (2, 3)))
+print(chesslogic_sample.validate((1, 3), (4, 3)))
 
 
 
