@@ -55,6 +55,7 @@ class Chesslogic:
         from_y = fromPos[0]
         to_x = toPos[1]
         to_y = toPos[0]
+
         if abs(to_x - from_x) == 2 and abs(to_y - from_y) == 1:
             return True
         elif abs(to_x - from_x) == 1 and abs(to_y - from_y) == 2:
@@ -70,21 +71,21 @@ class Chesslogic:
 
         if (from_x == to_x):
             if (to_y > from_y):
-                for i in range (from_y, to_y):
+                for i in range (from_y+1, to_y):
                     if self.board[from_x][i][0] != 'E':
                         return False
             else:
-                for i in range(to_y, from_y):
+                for i in range(to_y+1, from_y):
                     if self.board[from_x][i][0] != 'E':
                         return False
             return True
         elif (from_y == to_y):
             if (to_x > from_x):
-                for i in range (from_x, to_x):
+                for i in range (from_x+1, to_x):
                     if self.board[i][from_y][0] !=  'E':
                         return False
             else:
-                for i in range (to_x, from_x):
+                for i in range (to_x+1, from_x):
                     if self.board[i][from_y][0] != 'E':
                         return False
             return True
@@ -96,22 +97,22 @@ class Chesslogic:
         from_y = fromPos[0]
         to_x = toPos[1]
         to_y = toPos[0]
-        
+
         if (abs(to_x - from_x) == abs(to_y - from_y)):
             if (from_x > to_x) and (from_y > to_y):
-                for i in range (abs(to_x - from_x)):
+                for i in range (1, abs(to_x - from_x)):
                     if self.board[from_x - i][from_y - i][0] != 'E':
                         return False
             elif (from_x < to_x) and (from_y > to_y):
-                for i in range (abs(to_x - from_x)):
+                for i in range (1, abs(to_x - from_x)):
                     if self.board[from_x + i][from_y - i][0] != 'E':
                         return False
             elif (from_x > to_x) and (from_y < to_y):
-                for i in range (abs(to_x - from_x)):
+                for i in range (1, abs(to_x - from_x)):
                     if self.board[from_x - i][from_y + i][0] != 'E':
                         return False
             else:
-                for i in range (abs(to_x - from_x)):
+                for i in range (1, abs(to_x - from_x)):
                     if self.board[from_x + i][from_y + i][0] != 'E':
                         return False
             return True
@@ -119,21 +120,21 @@ class Chesslogic:
 
         elif (from_x == to_x):
             if (to_y > from_y):
-                for i in range (from_y, to_y):
+                for i in range (from_y+1, to_y):
                     if self.board[from_x][i][0] != 'E':
                         return False
             else:
-                for i in range(to_y, from_y):
+                for i in range(to_y+1, from_y):
                     if self.board[from_x][i][0] != 'E':
                         return False
             return True
         elif (from_y == to_y):
             if (to_x > from_x):
-                for i in range (from_x, to_x):
+                for i in range (from_x+1, to_x):
                     if self.board[i][from_y][0] != 'E':
                         return False
             else:
-                for i in range (to_x, from_x):
+                for i in range (to_x+1, from_x):
                     if self.board[i][from_y][0] != 'E':
                         return False
             return True
@@ -145,17 +146,13 @@ class Chesslogic:
         from_y = fromPos[0]
         to_x = toPos[1]
         to_y = toPos[0]
-        print("from_x", from_x)
-        print("from_y", from_y)
-        print("to_x", to_x)
-        print("to_y", to_y)
+
         if (from_x != to_x):
             if (abs(to_x - from_x) == 1) and (to_y - from_y == 1):
                 if self.board[to_x][to_y][0] == 'B':
                     return True
         else:
             if (to_y == 3) and (from_y == 1):
-                print("A")
                 return True
             elif(to_y - from_y== 1):
                 return True
@@ -169,19 +166,19 @@ class Chesslogic:
         
         if (abs(to_x - from_x) == abs(to_y - from_y)):
             if (from_x > to_x) and (from_y > to_y):
-                for i in range (abs(to_x - from_x)):
+                for i in range (1, abs(to_x - from_x)):
                     if self.board[from_x - i][from_y - i][0] != 'E':
                         return False
             elif (from_x < to_x) and (from_y > to_y):
-                for i in range (abs(to_x - from_x)):
+                for i in range (1, abs(to_x - from_x)):
                     if self.board[from_x + i][from_y - i][0] != 'E':
                         return False
             elif (from_x > to_x) and (from_y < to_y):
-                for i in range (abs(to_x - from_x)):
+                for i in range (1, abs(to_x - from_x)):
                     if self.board[from_x - i][from_y + i][0] != 'E':
                         return False
             else:
-                for i in range (abs(to_x - from_x)):
+                for i in range (1, abs(to_x - from_x)):
                     if self.board[from_x + i][from_y + i][0] != 'E':
                         return False
             return True
@@ -195,11 +192,7 @@ class Chesslogic:
 
         if(abs(to_x - from_x)<= 1) and (abs(to_y - from_y) <= 1):
             return True
-        else:
-            return False
-        
-
-
+        return False
 
     def validGeneral(self, fromPos, toPos):
         from_x = fromPos[0]
@@ -221,9 +214,7 @@ class Chesslogic:
             return False
         
         return True
-    
 
-    
     def validate(self, fromPos, toPos):
         from_x = fromPos[0]
         from_y = fromPos[1]
